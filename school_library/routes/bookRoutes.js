@@ -1,0 +1,10 @@
+const router4 = require("/express").Router();
+const bctrl = require("../controllers/bookController");
+router4.post("/",bctrl.createBook);
+router4.get("/",bctrl.getBook);
+router4.get("/:id",bctrl.getBook);
+router4.put("/:id", bctrl.updateBook);
+router4.delete("/:id", bctrl.deleteBook);
+router4.post("/:id/borrow", bctrl.borrowBook);
+router4.post("/:id/return", bctrl.returnBook);
+module.exports = router4;
